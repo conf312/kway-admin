@@ -15,3 +15,14 @@
 - 공통 게시판 CRUD
 - 메일 발송
 - 파일 관리
+
+## 모델
+![mvc drawio (1)](https://user-images.githubusercontent.com/13326651/196028715-41151f07-2881-400f-8547-a740b26e8541.png)
+
+## 구성화면
+
+## 빌드
+java -jar -DSpring.profiles.active=[profiles-env] [build.jar] --jasypt_key=[key]
+
+### option (no hang up)
+nohup java -jar -DSpring.profiles.active=[profile-env] [build.jar] --jasypt_key=[key]
