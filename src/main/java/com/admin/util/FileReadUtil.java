@@ -1,20 +1,29 @@
 package com.admin.util;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URISyntaxException;
 
 public class FileReadUtil {
-    private String path;
+    private final String path;
     public FileReadUtil(String path) {
         this.path = path;
     }
 
     public String getHtmlToString(String template) throws IOException {
-        String os = System.getProperty("os.name").toLowerCase();
-        if (os.contains("mac")) {
-            path = "/Users/venh/IdeaProjects/admin/src/main/resources/templates/mail/";
+        return readFromInputStream(getClass().getResourceAsStream(path + template));
+    }
+
+    private String readFromInputStream(InputStream inputStream) throws IOException {
+        StringBuilder resultStringBuilder = new StringBuilder();
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                resultStringBuilder.append(line).append("\n");
+            }
         }
-        return new String(Files.readAllBytes(Paths.get(path + template)));
+        return resultStringBuilder.toString();
     }
 }

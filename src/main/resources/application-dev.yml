@@ -44,13 +44,13 @@ global:
     admin: "http://localhost:19090"
     user: "http://localhost"
   file:
-    savePath: "C:\\Users\\venh\\IdeaProjects\\uploadFiles\\admin\\"
+    savePath: "/home/ec2-user/project/uploadFiles/admin/"
     webPath: "/uploadFiles/admin/"
     max-size: 10 #MB
     ext: "jpg,jpeg,gif,bmp,png,zip"
   mail:
     templates:
-      path: "C:\\Users\\venh\\IdeaProjects\\admin\\src\\main\\resources\\templates\\mail\\"
+      path: "/templates/mail/"
 
 jasypt:
   key: ${jasypt_key}

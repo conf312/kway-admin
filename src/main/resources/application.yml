@@ -51,7 +51,7 @@ global:
     ext: "jpg,jpeg,gif,bmp,png,zip"
   mail:
     templates:
-      path: "C:\\Users\\venh\\IdeaProjects\\admin\\src\\main\\resources\\templates\\mail\\"
+      path: "/templates/mail/"
 
 jasypt:
   key: ${jasypt_key}

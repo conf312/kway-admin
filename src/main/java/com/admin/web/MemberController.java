@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.security.SecureRandom;
 
 @RequiredArgsConstructor
