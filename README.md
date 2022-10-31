@@ -20,9 +20,15 @@
 ![mvc drawio (1)](https://user-images.githubusercontent.com/13326651/196028715-41151f07-2881-400f-8547-a740b26e8541.png)
 
 ## 구성화면
+![1](https://user-images.githubusercontent.com/94291819/195983010-6cb4afab-b036-46c0-bb5c-6f519a3e0a07.PNG)
+![2](https://user-images.githubusercontent.com/94291819/195983012-89fbe727-c481-4d2f-9452-0cedaa86b1b8.PNG)
+![3](https://user-images.githubusercontent.com/94291819/195983014-76836125-5c5a-4bae-9ab0-be3c9cca0498.PNG)
+![4](https://user-images.githubusercontent.com/94291819/195983015-c6474d1c-000e-4e49-8f75-f702966b132c.PNG)
+![5](https://user-images.githubusercontent.com/94291819/195983016-11fec11d-fe6c-4990-8ad2-560ef7f56012.PNG)
+![6](https://user-images.githubusercontent.com/94291819/195983074-360d3b4f-03bd-4d5d-988f-b45d1836de69.PNG)
 
 ## 빌드
 java -jar -DSpring.profiles.active=[profiles-env] [build.jar] --jasypt_key=[key]
 
-### option (no hang up)
-nohup java -jar -DSpring.profiles.active=[profile-env] [build.jar] --jasypt_key=[key]
+### option (no hang up &)
+nohup java -jar -DSpring.profiles.active=[profile-env] [build.jar] --jasypt_key=[key] &
