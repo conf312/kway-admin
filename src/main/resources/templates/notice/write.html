@@ -25,12 +25,14 @@
               <div class="select-style-1 mt-1">
                 <div class="select-position">
                   <select name="type" th:if="${resultMap == null}">
+                    <option value="NORMAL">일반</option>
                     <option value="SERVICE">서비스</option>
-                    <option value="CHECK">점검</option>
+                    <option value="EVENT">이벤트</option>
                   </select>
                   <select name="type" th:unless="${resultMap == null}">
+                    <option value="NORMAL" th:selected="${resultMap.info.type eq 'NORMAL'}">일반</option>
                     <option value="SERVICE" th:selected="${resultMap.info.type eq 'SERVICE'}">서비스</option>
-                    <option value="CHECK" th:selected="${resultMap.info.type eq 'CHECK'}">점검</option>
+                    <option value="EVENT" th:selected="${resultMap.info.type eq 'EVENT'}">이벤트</option>
                   </select>
                 </div>
               </div>

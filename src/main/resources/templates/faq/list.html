@@ -27,7 +27,8 @@
                         <select id="type" name="type">
                           <option value="" th:selected="${resultMap.request.type eq ''}">전체</option>
                           <option value="NORMAL" th:selected="${resultMap.request.type eq 'NORMAL'}">일반</option>
-                          <option value="ACCOUNT" th:selected="${resultMap.request.type eq 'ACCOUNT'}">계정</option>
+                          <option value="SERVICE" th:selected="${resultMap.request.type eq 'SERVICE'}">서비스</option>
+                          <option value="EVENT" th:selected="${resultMap.request.type eq 'EVENT'}">이벤트</option>
                         </select>
                       </div>
                     </div>
@@ -96,7 +97,8 @@
                       </td>
                       <td class="min-width">
                         <p th:if="${list.type eq 'NORMAL'}">일반</p>
-                        <p th:if="${list.type eq 'ACCOUNT'}">계정</p>
+                        <p th:if="${list.type eq 'SERVICE'}">서비스</p>
+                        <p th:if="${list.type eq 'EVENT'}">이벤트</p>
                       </td>
                       <td class="min-width">
                         <p>

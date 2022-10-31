@@ -26,11 +26,13 @@
                 <div class="select-position">
                   <select name="type" th:if="${info == null}">
                     <option value="NORMAL">일반</option>
-                    <option value="ACCOUNT">계정</option>
+                    <option value="SERVICE">서비스</option>
+                    <option value="EVENT">이벤트</option>
                   </select>
                   <select name="type" th:unless="${info == null}">
                     <option value="NORMAL" th:selected="${info.type eq 'NORMAL'}">일반</option>
-                    <option value="ACCOUNT" th:selected="${info.type eq 'ACCOUNT'}">계정</option>
+                    <option value="SERVICE" th:selected="${info.type eq 'SERVICE'}">서비스</option>
+                    <option value="EVENT" th:selected="${info.type eq 'EVENT'}">이벤트</option>
                   </select>
                 </div>
               </div>
