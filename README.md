@@ -30,5 +30,5 @@
 ## 빌드
 java -jar -DSpring.profiles.active=[profiles-env] [build.jar] --jasypt_key=[key]
 
-### option (no hang up)
+### option (no hang up &)
 nohup java -jar -DSpring.profiles.active=[profile-env] [build.jar] --jasypt_key=[key] &
