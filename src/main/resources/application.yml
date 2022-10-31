@@ -12,10 +12,10 @@ spring:
     cache: false
     prefix: file:src/main/resources/templates/
   datasource:
-    driverClassName: org.mariadb.jdbc.Driver
-    url: ENC(/5QV5m9q85hcz0gg2oFS3y2e6vEz7t9oAU4CTR1ornhbSR5ECBfXGEFKTutmMwssxfVI3BwtfPEfBlkIG+1/l1TP9d0umRpQIAex1WXscjPez2JxlKgUDz3ZvPHug7xNLKh2TyF4j6Q=)
-    username: ENC(qG1TtannODNYUCUgkm41Vw==)
-    password: ENC(jQSqmaD8dW1NvIj8syZhbjIxL5SebygM)
+    driverClassName: org.postgresql.Driver
+    url: ENC(AUDZhPAjbhCk2PHnOlMa6qqU1gZ+HvTgD01b3FDNw8naC1jvCG4n27KFraUYwClcQ9I2vpLAiFRbTDFXHBqJ4ZnHo22iUf6qPo2u/DgKsW1/tO3sFKlQlVbSkVn4wY//zVwmaO+hdLM=)
+    username: ENC(p/64CiyEW+mqrz+ks6rekA==)
+    password: ENC(nF8qVW4Au/T0NilfKEeU18P16jqhM0Pt)
   jpa:
     show-sql: true
     properties:

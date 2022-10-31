@@ -51,6 +51,7 @@ public class NoticeService {
         return notice.title.containsIgnoreCase(search).or(notice.contents.containsIgnoreCase(search));
     }
 
+    @Transactional
     public Long save(Notice.Request request, MultipartRequest multipartRequest) throws Exception {
 
         request.setRegisterId(AuthorizationUtil.getMember().getId());

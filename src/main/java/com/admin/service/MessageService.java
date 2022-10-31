@@ -27,6 +27,7 @@ public class MessageService {
     private final QMember member = QMember.member;
     private final QAttachFile attachFile = QAttachFile.attachFile;
 
+    @Transactional
     public Long save(Message.Request request) {
         request.setRegisterId(AuthorizationUtil.getMember().getId());
         return messageRepository.save(request.toEntity()).getId();

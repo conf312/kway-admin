@@ -42,9 +42,8 @@
               </div>
               <label class="text-dark ft-gm"><span class="text-danger">*</span>내용</label>
               <div class="input-style-3 mt-1">
-                <textarea rows="7" name="contents" th:if="${resultMap == null}" required></textarea>
-                <textarea rows="7" name="contents" th:unless="${resultMap == null}" th:text="${resultMap.info.contents}" required></textarea>
-                <span class="icon"><i class="lni lni-text-format"></i></span>
+                <textarea class="editor" name="contents" th:if="${resultMap == null}"></textarea>
+                <textarea class="editor" name="contents" th:unless="${resultMap == null}" th:text="${resultMap.info.contents}"></textarea>
               </div>
               <div class="row">
                 <div class="col-lg-12" id="fileDiv">
@@ -156,6 +155,11 @@
     const attachFileDiv = $("#attachFileDiv");
     let deleteFlag = false;
     let fileListSize = Number($("#fileListSize").val() ? $("#fileListSize").val() : 0);
+    let editor;
+
+    script.ckeditorInit("editor", function(r) {
+      editor = r;
+    });
 
     if (fileListSize > 2) {
       attachFileDiv.hide();
@@ -220,6 +224,12 @@
     }
 
     frm.submit(function() {
+      const editorLength = editor.getData().replace(/<[^>]*>/gi, '').length;
+      if (!editorLength) {
+        alert(msg.empty.contents);
+        $(".ck-editor__editable_inline").focus();
+        return false;
+      }
       if (deleteFlag) {
         return true;
       }

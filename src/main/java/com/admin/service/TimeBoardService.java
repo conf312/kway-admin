@@ -47,6 +47,7 @@ public class TimeBoardService {
         return timeBoard.title.containsIgnoreCase(search).or(timeBoard.contents.containsIgnoreCase(search));
     }
 
+    @Transactional
     public Long save(TimeBoard.Request request, MultipartRequest multipartRequest) throws Exception {
 
         request.setRegisterId(AuthorizationUtil.getMember().getId());

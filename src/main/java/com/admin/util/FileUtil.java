@@ -27,7 +27,7 @@ public class FileUtil {
         Calendar calendar = Calendar.getInstance();
         String year = String.valueOf(calendar.get(Calendar.YEAR));
         String month = String.valueOf(calendar.get(Calendar.MONTH) + 1);
-        String day = String.valueOf(calendar.get(Calendar.DAY_OF_WEEK));
+        String day = String.valueOf(calendar.get(Calendar.DAY_OF_MONTH));
 
         webPath = webPath + year + "/" + month + "/" + day;
 

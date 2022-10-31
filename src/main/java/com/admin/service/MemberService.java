@@ -112,6 +112,7 @@ public class MemberService implements UserDetailsService {
         return result;
     }
 
+    @Transactional
     public Long save(Member.Request request) {
         request.setPassword(new BCryptPasswordEncoder().encode(request.getPassword()));
         return memberRepository.save(request.toEntity()).getId();

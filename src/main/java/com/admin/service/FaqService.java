@@ -43,6 +43,7 @@ public class FaqService {
         return faq.title.containsIgnoreCase(search).or(faq.contents.containsIgnoreCase(search));
     }
 
+    @Transactional
     public Long save(Faq.Request request) {
         request.setRegisterId(AuthorizationUtil.getMember().getId());
         return faqRepository.save(request.toEntity()).getId();

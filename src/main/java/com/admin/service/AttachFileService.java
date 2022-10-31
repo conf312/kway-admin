@@ -22,6 +22,7 @@ public class AttachFileService {
     private final QAttachFile attachFile = QAttachFile.attachFile;
     private final FileUtil fileUtil;
 
+    @Transactional
     public boolean upload(MultipartRequest multipartRequest, String targetTable, Long targetId, Long id) throws Exception {
 
         List<AttachFile> attachFileList = fileUtil.upload(multipartRequest, targetTable, targetId, id);
