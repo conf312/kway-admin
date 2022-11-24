@@ -8,7 +8,7 @@
 <img src="https://img.shields.io/badge/Thymeleaf-005F0F?style=flat-square&logo=Thymeleaf&logoColor=white">
 
 ## 데이터베이스
-<img src="https://img.shields.io/badge/postgreSQL-003545?style=flat-square&logo=postgreSQL&logoColor=white">
+<img src="https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=MariaDB&logoColor=white">
 
 ## 주요 기능
 - 로그인 및 회원관리
